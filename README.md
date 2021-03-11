@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pull info about requested area/city like it's population, income, living cost etc scores. As well it will show the google map centered on that area
 
-## Available Scripts
+## Link to the API you plan to use
 
-In the project directory, you can run:
+Teleport API, they create the scores for income etc:
+https://developers.teleport.org/api/
+Google Maps API to show the actual map:
+https://developers.google.com/maps/
 
-### `npm start`
+## Example data response you plan to use
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/scores/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Visual of your component hierarchy
 
-### `npm test`
+Navigation Bar (showing links to home page / current search / link to search history
+HomePage (search coordinates/ city functionality)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Details(one that will have actual info)
+> Map(shows map centered on searched location, as a separate element)
 
-### `npm run build`
+> Search History(showing previously searched locations by user with link to details and map element)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Wire Frames
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://app.mockplus.com/run/rp/AfQIhrYvw0g/_WftJ26KRRD?ps=1&ha=0&la=0&fc=0&out=1
+![WireframHOME](https://media.git.generalassemb.ly/user/34028/files/5a059d80-81a0-11eb-99ac-19bff6a9b3f5)
+![WireframDetails](https://media.git.generalassemb.ly/user/34028/files/7acdf300-81a0-11eb-98f5-755b561a4f58)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## User Stories
 
-### `npm run eject`
+As a user I want to search by name of the city or coordinates and see details relevant to that location as well as a map of that location.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### MVP Goals
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Search by city name or coordinates
+Display info
+Display map
+Display search history
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Stretch Goals
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clickable search History elements that return to the page with details and a map
+Additional info from different API's
+Be able to search by clicking on the location on the map
