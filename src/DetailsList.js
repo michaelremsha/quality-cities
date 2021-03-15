@@ -7,20 +7,30 @@ export default function DetailsList({ details, viewed, setViewed }) {
 	const [listItem, setListItem] = useState(false);
 	// const [listItemPrev, setListItemPrev] = useState(false);
 
+	useEffect(() => {
+		setViewed(new Array(details.length).fill(false));
+	}, []);
+
+	function updateViewed(index) {
+		const current = [...viewed];
+		current[index] = !current[index];
+		setViewed(current);
+	}
 	return (
 		<div>
-			{listItem && <Details details={details[18]} />}
-
-			<button
-				onClick={() => {
-					// const current = viewed.slice();
-					// current.append();
-					// console.log(current);
-					setListItem(!listItem);
-					// setViewed();
-				}}>
-				More
-			</button>
+			{details.map((item, index) => {
+				return (
+					<div key={index}>
+						<button
+							onClick={() => {
+								updateViewed(index);
+							}}>
+							{item.label}
+						</button>
+						{viewed[index] && <Details details={item} />}
+					</div>
+				);
+			})}
 			{/* {listItem && <Details details={details.list[2]} />}
 			<button onClick={() => setListItem(!listItem)}>More</button> */}
 		</div>

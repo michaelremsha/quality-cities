@@ -11,7 +11,7 @@ function App() {
 	const [citySearch, setCitySearch] = useState({});
 	const [details, setDetails] = useState({});
 	const [isEnabled, setIsEnabled] = useState(false);
-	const [viewed, setViewed] = useState([1, 2]);
+	const [viewed, setViewed] = useState([]);
 
 	// const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 	// let isEnabled = true;
@@ -30,7 +30,8 @@ function App() {
 			{citySearch.geoname_id ? (
 				<div>
 					<Results citySearch={citySearch} />
-
+					<Map citySearch={citySearch} />
+					<button onClick={() => setIsEnabled(!isEnabled)}>See More</button>
 					{isEnabled && (
 						<DetailsList
 							details={details}
@@ -38,13 +39,11 @@ function App() {
 							setViewed={setViewed}
 						/>
 					)}
-					<button onClick={() => setIsEnabled(!isEnabled)}>See More</button>
+
 					{/* {isEnabled && <Details details={details[2]} />}
 					<button onClick={() => setIsEnabled(!isEnabled)}>
 					Click to unmount
 				</button> */}
-
-					<Map citySearch={citySearch} />
 				</div>
 			) : null}
 		</div>

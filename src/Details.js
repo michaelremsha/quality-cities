@@ -14,7 +14,7 @@ export default function Details({ details }) {
 			<div>
 				<h3>Detail Component</h3>
 				<ul>
-					<h3>{details.label}</h3>
+					{/* <h3>{details.label}</h3> */}
 					{details.data.map((item) => {
 						return (
 							<li key={item.id}>
