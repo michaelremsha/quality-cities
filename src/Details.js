@@ -14,11 +14,11 @@ export default function Details({ details }) {
 			<div>
 				<h3>Detail Component</h3>
 				<ul>
-					<h3>{details[0].label}</h3>
-					{details[0].data.map((item) => {
+					<h3>{details.label}</h3>
+					{details.data.map((item) => {
 						return (
 							<li key={item.id}>
-								{item.id} = {item.float_value}
+								{item.id} : {item[`${item.type}_value`]}
 							</li>
 						);
 					})}

@@ -20,7 +20,7 @@ export default function Map({ citySearch }) {
 		});
 	}, [citySearch]);
 
-	console.log(coordinates);
+	// console.log(coordinates);
 	// console.log(prevCoord);
 
 	if (coordinates.lat === null) {

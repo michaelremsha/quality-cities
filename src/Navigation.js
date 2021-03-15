@@ -34,9 +34,6 @@ export default function Navigation({
 		});
 	};
 
-	console.log(citySearch);
-	console.log(details);
-
 	return (
 		<div className='front'>
 			<Link to='/'>
