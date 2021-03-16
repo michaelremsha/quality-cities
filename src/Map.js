@@ -37,7 +37,7 @@ export default function Map({ citySearch }) {
 						attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 						url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 					/>
-					<MyMap center={[coordinates.lat, coordinates.lon]} zoom={11} />
+					<MyMap center={[coordinates.lat, coordinates.lon]} zoom={10} />
 				</MapContainer>
 			) : null}
 		</div>
