@@ -14,8 +14,6 @@ export default function Navigation({
 		e.preventDefault();
 		let url = `https:api.teleport.org/api/cities/?search=${search}&limit=1&embed=city:search-results/city:item/{city:urban_area,city:timezone/tz:offsets-now`;
 
-		//api.teleport.org/api/cities/?search=${search}
-
 		axios.get(url).then((res) => {
 			setCitySearch(
 				res.data._embedded['city:search-results'][0]._embedded[`city:item`]
@@ -29,13 +27,9 @@ export default function Navigation({
 			let url1 = `https://api.teleport.org/api/urban_areas/slug:${slug}/details/`;
 			axios.get(url1).then((res) => {
 				setDetails(res.data.categories);
-				// console.log(res1);
 			});
 		});
 	};
-
-	console.log(citySearch);
-	console.log(details);
 
 	return (
 		<div className='front'>
