@@ -14,7 +14,6 @@ export default function Details({ details }) {
 			<div>
 				<h3>Detail Component</h3>
 				<ul>
-					{/* <h3>{details.label}</h3> */}
 					{details.data.map((item) => {
 						return (
 							<li key={item.id}>
@@ -22,9 +21,6 @@ export default function Details({ details }) {
 							</li>
 						);
 					})}
-					{/* <li>
-						{details[0].data[2].id} = {details[0].data[2].float_value}
-					</li> */}
 				</ul>
 			</div>
 		</div>

@@ -4,9 +4,6 @@ import Details from './Details';
 export default function DetailsList({ details, viewed, setViewed }) {
 	console.log(details);
 
-	const [listItem, setListItem] = useState(false);
-	// const [listItemPrev, setListItemPrev] = useState(false);
-
 	useEffect(() => {
 		setViewed(new Array(details.length).fill(false));
 	}, []);

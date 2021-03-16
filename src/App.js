@@ -13,8 +13,6 @@ function App() {
 	const [isEnabled, setIsEnabled] = useState(false);
 	const [viewed, setViewed] = useState([]);
 
-	// const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-	// let isEnabled = true;
 	console.log(citySearch);
 	console.log(details);
 	return (
@@ -39,11 +37,6 @@ function App() {
 							setViewed={setViewed}
 						/>
 					)}
-
-					{/* {isEnabled && <Details details={details[2]} />}
-					<button onClick={() => setIsEnabled(!isEnabled)}>
-					Click to unmount
-				</button> */}
 				</div>
 			) : null}
 		</div>
