@@ -5,6 +5,7 @@ import Navigation from './Navigation';
 import Results from './Results';
 import Map from './Map';
 import DetailsList from './DetailsList';
+import { Button } from 'react-bootstrap';
 
 function App() {
 	const [search, setSearch] = useState();
@@ -29,7 +30,9 @@ function App() {
 				<div>
 					<Results citySearch={citySearch} />
 					<Map citySearch={citySearch} />
-					<button onClick={() => setIsEnabled(!isEnabled)}>See More</button>
+					<Button bsStyle='primary' onClick={() => setIsEnabled(!isEnabled)}>
+						See More
+					</Button>
 					{isEnabled && (
 						<DetailsList
 							details={details}
