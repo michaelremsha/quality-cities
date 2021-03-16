@@ -12,7 +12,7 @@ export default function Navigation({
 }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		let url = `https:api.teleport.org/api/cities/?search=${search}&limit=1&embed=city:search-results/city:item/{city:urban_area,city:timezone/tz:offsets-now`;
+		let url = `https://api.teleport.org/api/cities/?search=${search}&limit=1&embed=city:search-results/city:item/{city:urban_area,city:timezone/tz:offsets-now`;
 
 		axios.get(url).then((res) => {
 			setCitySearch(
