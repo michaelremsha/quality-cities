@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Details from './Details';
 
 export default function DetailsList({ details, viewed, setViewed }) {
-	console.log(details);
-
 	useEffect(() => {
 		setViewed(new Array(details.length).fill(false));
 	}, []);
@@ -28,8 +26,6 @@ export default function DetailsList({ details, viewed, setViewed }) {
 					</div>
 				);
 			})}
-			{/* {listItem && <Details details={details.list[2]} />}
-			<button onClick={() => setListItem(!listItem)}>More</button> */}
 		</div>
 	);
 }
