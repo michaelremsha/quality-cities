@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Details({ details }) {
-	console.log(details);
 	if (!details) {
 		return (
 			<div>

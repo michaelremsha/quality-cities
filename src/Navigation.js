@@ -32,7 +32,7 @@ export default function Navigation({
 	};
 
 	return (
-		<div className='front'>
+		<div className='m-4 text-right'>
 			<Link to='/'>
 				<h1>Home</h1>
 			</Link>
